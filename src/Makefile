@@ -71,6 +71,8 @@ NVCUFLAGS += -DMPI_SUPPORT
 NVLDFLAGS += -lmpi_ibm
 endif
 LIBRARIES += nccl
+LIBRARIES += cuda
+LIBRARIES += cudart
 NVLDFLAGS += $(LIBRARIES:%=-l%)
 
 DST_DIR := $(BUILDDIR)
